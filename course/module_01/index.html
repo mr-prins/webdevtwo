@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevtwo.mrprins.com/course/module_01/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Introduction to Advanced HTML - Web Development II - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Introduction to Advanced HTML";
+        var mkdocs_page_input_path = "course\\module_01.md";
+        var mkdocs_page_url = "/course/module_01/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development II - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Introduction to Advanced HTML</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-youll-learn">What You'll Learn:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#svg-images-scalable-vector-graphics">SVG Images: Scalable Vector Graphics</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-is-svg">What is SVG?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-to-use-svgs">How to Use SVGs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#benefits-of-svg">Benefits of SVG</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#html-forms-enhancing-user-interaction">HTML Forms: Enhancing User Interaction</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#form-elements">Form Elements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#form-methods-get-vs-post">Form Methods: GET vs. POST</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#iframes-and-embedded-content">Iframes and Embedded Content</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#using-iframes">Using Iframes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#canvas-element">Canvas Element</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_02/">Incorporating JavaScript</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_03/">Performance Skills I</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_04/">Advanced CSS Selectors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_05/">Website Planning and Usability</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_06/">Content Creation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_07/">Website Deployment and Maintenance</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_08/">Performance Skills II</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_09/">JavaScript Basics</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development II - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">Introduction to Advanced HTML</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="introduction-to-advanced-html5">Introduction to Advanced HTML5</h1>
+<h2 id="overview">Overview</h2>
+<p>Welcome to the first module of Web Development II, where we'll dive into the world of advanced HTML5 elements. HTML5 is the cornerstone of modern web development, providing a wide array of elements that enhance the functionality and user experience of websites. In this module, you'll learn how to utilize these advanced HTML5 features effectively, enabling you to build more dynamic and responsive web pages.</p>
+<h3 id="what-youll-learn">What You'll Learn:</h3>
+<ul>
+<li>The importance of advanced HTML5 elements.</li>
+<li>How to work with scalable vector graphics (SVG).</li>
+<li>Creating and managing HTML forms with advanced elements.</li>
+<li>Embedding external content using iframes and the <code>&lt;canvas&gt;</code> element.</li>
+</ul>
+<h2 id="svg-images-scalable-vector-graphics">SVG Images: Scalable Vector Graphics</h2>
+<h3 id="what-is-svg">What is SVG?</h3>
+<p>SVG stands for Scalable Vector Graphics. Unlike traditional image formats like JPEG or PNG, SVGs are vector-based, which means they can scale infinitely without losing quality. This makes them perfect for responsive web design, where images need to look sharp on all screen sizes.</p>
+<h3 id="how-to-use-svgs">How to Use SVGs</h3>
+<ol>
+<li><strong>Embedding SVG Directly in HTML:</strong></li>
+</ol>
+<pre><code class="language-html">&lt;svg width=&quot;100&quot; height=&quot;100&quot;&gt;
+  &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;40&quot; stroke=&quot;black&quot; stroke-width=&quot;3&quot; fill=&quot;red&quot; /&gt;
+&lt;/svg&gt;
+</code></pre>
+<ul>
+<li>
+<p>This method involves directly embedding SVG code within your HTML file. It's ideal for small graphics like icons.</p>
+</li>
+<li>
+<p><strong>Using SVG Files:</strong></p>
+</li>
+</ul>
+<pre><code class="language-html">&lt;img src=&quot;image.svg&quot; alt=&quot;Description of image&quot; /&gt;
+</code></pre>
+<ul>
+<li>SVG files can be created using vector graphic software like Adobe Illustrator or Inkscape. Once saved as an <code>.svg</code> file, you can embed them like any other image.</li>
+</ul>
+<h3 id="benefits-of-svg">Benefits of SVG</h3>
+<ul>
+<li><strong>Scalability:</strong> SVG images remain crisp and clear at any size.</li>
+<li><strong>Smaller File Size:</strong> SVG files are often smaller in size compared to raster images.</li>
+<li><strong>Editable:</strong> Since SVGs are essentially XML code, they can be easily edited in a text editor.</li>
+</ul>
+<h2 id="html-forms-enhancing-user-interaction">HTML Forms: Enhancing User Interaction</h2>
+<p>Forms are essential for collecting user input on a website. In this section, we'll explore the various HTML5 elements that make forms more user-friendly and functional.</p>
+<h3 id="form-elements">Form Elements</h3>
+<ul>
+<li><strong>Radio Buttons:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;male&quot; /&gt; Male
+&lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;female&quot; /&gt; Female
+</code></pre>
+<ul>
+<li>
+<p>Radio buttons allow users to select one option from a set.</p>
+</li>
+<li>
+<p><strong>Checkboxes:</strong></p>
+</li>
+</ul>
+<pre><code class="language-html">&lt;input type=&quot;checkbox&quot; name=&quot;vehicle&quot; value=&quot;Bike&quot; /&gt; I have a bike
+&lt;input type=&quot;checkbox&quot; name=&quot;vehicle&quot; value=&quot;Car&quot; /&gt; I have a car
+</code></pre>
+<ul>
+<li>
+<p>Checkboxes let users select multiple options.</p>
+</li>
+<li>
+<p><strong>Text Fields:</strong></p>
+</li>
+</ul>
+<pre><code class="language-html">&lt;input type=&quot;text&quot; name=&quot;fullname&quot; placeholder=&quot;Enter your full name&quot; /&gt;
+</code></pre>
+<ul>
+<li>
+<p>A basic input field for text.</p>
+</li>
+<li>
+<p><strong>Dropdown Lists:</strong></p>
+</li>
+</ul>
+<pre><code class="language-html">&lt;select name=&quot;country&quot;&gt;
+  &lt;option value=&quot;usa&quot;&gt;USA&lt;/option&gt;
+  &lt;option value=&quot;canada&quot;&gt;Canada&lt;/option&gt;
+  &lt;option value=&quot;mexico&quot;&gt;Mexico&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<ul>
+<li>
+<p>A dropdown list allows users to select an option from a list.</p>
+</li>
+<li>
+<p><strong>Submit Button:</strong></p>
+</li>
+</ul>
+<pre><code class="language-html">&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+</code></pre>
+<ul>
+<li>The submit button sends the form data to the server.</li>
+</ul>
+<h3 id="form-methods-get-vs-post">Form Methods: GET vs. POST</h3>
+<ul>
+<li>
+<p><strong>GET Method:</strong></p>
+</li>
+<li>
+<p>The <code>GET</code> method appends the form data to the URL. It's suitable for non-sensitive data.</p>
+</li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-html">&lt;form action=&quot;/submit_form&quot; method=&quot;get&quot;&gt;&lt;/form&gt;
+</code></pre>
+<ul>
+<li><strong>POST Method:</strong></li>
+<li>The <code>POST</code> method sends the form data as a separate message, keeping it out of the URL. This method is more secure and is used for sensitive information like passwords.</li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-html">&lt;form action=&quot;/submit_form&quot; method=&quot;post&quot;&gt;&lt;/form&gt;
+</code></pre>
+<h2 id="iframes-and-embedded-content">Iframes and Embedded Content</h2>
+<p>Iframes are powerful tools for embedding external content into your web pages.</p>
+<h3 id="using-iframes">Using Iframes</h3>
+<ul>
+<li><strong>Embedding a Webpage:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;iframe src=&quot;https://www.example.com&quot; width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/iframe&gt;
+</code></pre>
+<ul>
+<li>Iframes can be used to embed another webpage within your own. This is useful for displaying third-party content without leaving your site.</li>
+</ul>
+<h3 id="canvas-element">Canvas Element</h3>
+<p>The <code>&lt;canvas&gt;</code> element allows you to draw graphics using JavaScript, making it a powerful tool for creating dynamic and interactive content.</p>
+<ul>
+<li><strong>Simple Canvas Example:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;100&quot;&gt;&lt;/canvas&gt;
+&lt;script&gt;
+  var c = document.getElementById(&quot;myCanvas&quot;);
+  var ctx = c.getContext(&quot;2d&quot;);
+  ctx.fillStyle = &quot;#FF0000&quot;;
+  ctx.fillRect(0, 0, 150, 75);
+&lt;/script&gt;
+</code></pre>
+<ul>
+<li>This example draws a red rectangle on the canvas. With JavaScript, you can create more complex graphics like charts, games, and animations.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../.." class="btn btn-neutral float-left" title="About"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../module_02/" class="btn btn-neutral float-right" title="Incorporating JavaScript">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../module_02/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

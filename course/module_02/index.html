@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevtwo.mrprins.com/course/module_02/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Incorporating JavaScript - Web Development II - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Incorporating JavaScript";
+        var mkdocs_page_input_path = "course\\module_02.md";
+        var mkdocs_page_url = "/course/module_02/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development II - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../module_01/">Introduction to Advanced HTML</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Incorporating JavaScript</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-youll-learn">What You'll Learn:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#including-javascript-in-html">Including JavaScript in HTML</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#in-line-javascript">In-line JavaScript</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#internal-javascript">Internal JavaScript</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#external-javascript">External JavaScript</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#apis-in-html">APIs in HTML</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-is-an-api">What is an API?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#geolocation-api">Geolocation API</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#web-storage-api">Web Storage API</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#drag-and-drop-api">Drag-and-Drop API</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_03/">Performance Skills I</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_04/">Advanced CSS Selectors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_05/">Website Planning and Usability</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_06/">Content Creation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_07/">Website Deployment and Maintenance</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_08/">Performance Skills II</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_09/">JavaScript Basics</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development II - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">Incorporating JavaScript</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="incorporating-javascript">Incorporating JavaScript</h1>
+<h2 id="overview">Overview</h2>
+<p>In this module, we will explore how to incorporate JavaScript into your web projects to make them interactive and dynamic. JavaScript is the programming language of the web, and it plays a crucial role in modern web development. By the end of this module, you'll have a solid understanding of how to integrate JavaScript into your HTML5 projects, enhancing user interaction and functionality.</p>
+<h3 id="what-youll-learn">What You'll Learn:</h3>
+<ul>
+<li>Different methods of including JavaScript in your HTML documents.</li>
+<li>The power of JavaScript in adding interactivity to web pages.</li>
+<li>How to work with APIs to extend the capabilities of your websites.</li>
+</ul>
+<h2 id="including-javascript-in-html">Including JavaScript in HTML</h2>
+<h3 id="in-line-javascript">In-line JavaScript</h3>
+<p>In-line JavaScript is written directly within the HTML tags using the <code>onclick</code>, <code>onload</code>, or other event attributes. While this method is simple and convenient for small scripts, it can make your HTML code cluttered and harder to maintain.</p>
+<ul>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;button onclick=&quot;alert('Hello, World!')&quot;&gt;Click Me&lt;/button&gt;
+</code></pre>
+<ul>
+<li>This button triggers a JavaScript alert when clicked.</li>
+</ul>
+<h3 id="internal-javascript">Internal JavaScript</h3>
+<p>Internal JavaScript is written within the <code>&lt;script&gt;</code> tags in the HTML document's <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code> section. This method keeps your JavaScript organized within your HTML file, but can still lead to clutter if the script is large.</p>
+<ul>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;script&gt;
+  function showMessage() {
+    alert(&quot;Hello, World!&quot;);
+  }
+&lt;/script&gt;
+&lt;button onclick=&quot;showMessage()&quot;&gt;Click Me&lt;/button&gt;
+</code></pre>
+<ul>
+<li>This example defines the <code>showMessage</code> function within the <code>&lt;script&gt;</code> tag and calls it when the button is clicked.</li>
+</ul>
+<h3 id="external-javascript">External JavaScript</h3>
+<p>External JavaScript is written in a separate <code>.js</code> file and linked to your HTML document using the <code>&lt;script&gt;</code> tag. This is the preferred method for larger projects as it keeps your HTML clean and separates the concerns of structure (HTML) and behavior (JavaScript).</p>
+<ul>
+<li><strong>Example:</strong></li>
+<li><strong>HTML:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;script src=&quot;scripts.js&quot;&gt;&lt;/script&gt;
+&lt;button onclick=&quot;showMessage()&quot;&gt;Click Me&lt;/button&gt;
+</code></pre>
+<ul>
+<li><strong>scripts.js:</strong></li>
+</ul>
+<pre><code class="language-javascript">function showMessage() {
+  alert(&quot;Hello, World!&quot;);
+}
+</code></pre>
+<ul>
+<li>The external script file <code>scripts.js</code> contains the JavaScript code, which is linked to the HTML document using the <code>&lt;script src="scripts.js"&gt;</code> tag.</li>
+</ul>
+<h2 id="apis-in-html">APIs in HTML</h2>
+<h3 id="what-is-an-api">What is an API?</h3>
+<p>An API (Application Programming Interface) allows different software systems to communicate with each other. In web development, APIs enable you to integrate external services or functionalities into your website, like maps, geolocation, or social media feeds.</p>
+<h3 id="geolocation-api">Geolocation API</h3>
+<p>The Geolocation API allows you to access the geographical location of a user's device. This can be useful for location-based services like finding nearby restaurants or displaying a user's current location on a map.</p>
+<ul>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="language-javascript">function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    alert(&quot;Geolocation is not supported by this browser.&quot;);
+  }
+}
+
+function showPosition(position) {
+  document.getElementById(&quot;location&quot;).innerHTML =
+    &quot;Latitude: &quot; +
+    position.coords.latitude +
+    &quot;&lt;br&gt;Longitude: &quot; +
+    position.coords.longitude;
+}
+</code></pre>
+<ul>
+<li>This code gets the user's current location and displays the latitude and longitude on the webpage.</li>
+</ul>
+<h3 id="web-storage-api">Web Storage API</h3>
+<p>The Web Storage API provides a way to store data on the user's browser. It includes <code>localStorage</code> for storing data persistently across sessions and <code>sessionStorage</code> for temporary data storage that is cleared when the browser is closed.</p>
+<ul>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="language-javascript">// Save data to localStorage
+localStorage.setItem(&quot;username&quot;, &quot;JohnDoe&quot;);
+
+// Retrieve data from localStorage
+var user = localStorage.getItem(&quot;username&quot;);
+document.getElementById(&quot;user&quot;).innerHTML = &quot;Welcome, &quot; + user;
+</code></pre>
+<ul>
+<li>This example stores the username in the browser's local storage and retrieves it to display on the webpage.</li>
+</ul>
+<h3 id="drag-and-drop-api">Drag-and-Drop API</h3>
+<p>The Drag-and-Drop API enables elements to be dragged and dropped within a webpage. This is useful for interactive elements like dragging files to upload or rearranging items in a list.</p>
+<ul>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;div id=&quot;drag1&quot; draggable=&quot;true&quot; ondragstart=&quot;drag(event)&quot;&gt;Drag me&lt;/div&gt;
+&lt;div id=&quot;div1&quot; ondrop=&quot;drop(event)&quot; ondragover=&quot;allowDrop(event)&quot;&gt;&lt;/div&gt;
+
+&lt;script&gt;
+  function allowDrop(ev) {
+    ev.preventDefault();
+  }
+
+  function drag(ev) {
+    ev.dataTransfer.setData(&quot;text&quot;, ev.target.id);
+  }
+
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData(&quot;text&quot;);
+    ev.target.appendChild(document.getElementById(data));
+  }
+&lt;/script&gt;
+</code></pre>
+<ul>
+<li>This example allows an element to be dragged and dropped into another area on the page.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../module_01/" class="btn btn-neutral float-left" title="Introduction to Advanced HTML"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../module_03/" class="btn btn-neutral float-right" title="Performance Skills I">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../module_01/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../module_03/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

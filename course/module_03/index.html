@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevtwo.mrprins.com/course/module_03/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Performance Skills I - Web Development II - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Performance Skills I";
+        var mkdocs_page_input_path = "course\\module_03.md";
+        var mkdocs_page_url = "/course/module_03/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development II - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../module_01/">Introduction to Advanced HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_02/">Incorporating JavaScript</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Performance Skills I</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-youll-learn">What You'll Learn:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#coding-activity-implementing-advanced-html5-elements">Coding Activity: Implementing Advanced HTML5 Elements</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#task-1-creating-an-interactive-form">Task 1: Creating an Interactive Form</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#task-2-embedding-svg-images-and-using-the-canvas-element">Task 2: Embedding SVG Images and Using the &lt;canvas&gt; Element</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#practice-exercise-building-a-comprehensive-webpage">Practice Exercise: Building a Comprehensive Webpage</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#task-create-a-webpage-incorporating-key-elements">Task: Create a Webpage Incorporating Key Elements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bonus-task">Bonus Task:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_04/">Advanced CSS Selectors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_05/">Website Planning and Usability</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_06/">Content Creation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_07/">Website Deployment and Maintenance</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_08/">Performance Skills II</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_09/">JavaScript Basics</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development II - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">Performance Skills I</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="performance-skills-i">Performance Skills I</h1>
+<h2 id="overview">Overview</h2>
+<p>In this module, we’ll focus on putting the advanced HTML5 elements and JavaScript techniques you've learned so far into practice. By working on a series of coding activities and a comprehensive practice exercise, you’ll solidify your understanding and gain hands-on experience. This module emphasizes applying theoretical knowledge to real-world scenarios, preparing you to build sophisticated and interactive web pages.</p>
+<h3 id="what-youll-learn">What You'll Learn:</h3>
+<ul>
+<li>How to implement advanced HTML5 elements in a real-world project.</li>
+<li>Creating interactive and user-friendly forms.</li>
+<li>Embedding SVG images and utilizing the <code>&lt;canvas&gt;</code> element.</li>
+<li>Combining HTML, CSS, and JavaScript to build functional web pages.</li>
+</ul>
+<h2 id="coding-activity-implementing-advanced-html5-elements">Coding Activity: Implementing Advanced HTML5 Elements</h2>
+<h3 id="task-1-creating-an-interactive-form">Task 1: Creating an Interactive Form</h3>
+<p>In this task, you'll create an interactive form that uses the advanced HTML5 elements you've learned about in previous modules.</p>
+<ol>
+<li>
+<p><strong>Form Structure:</strong></p>
+</li>
+<li>
+<p>Create a new HTML file and structure it using semantic elements like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code>.</p>
+</li>
+<li>Add a form within the <code>&lt;main&gt;</code> section. Your form should include:</li>
+<li>Text fields for user input.</li>
+<li>Radio buttons and checkboxes for user selection.</li>
+<li>A dropdown list for selecting options.</li>
+<li>
+<p>A submit button.</p>
+</li>
+<li>
+<p><strong>Example:</strong></p>
+</li>
+</ol>
+<pre><code class="language-html">&lt;form action=&quot;/submit&quot; method=&quot;post&quot;&gt;
+  &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot; required /&gt;
+
+  &lt;label for=&quot;gender&quot;&gt;Gender:&lt;/label&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;male&quot; name=&quot;gender&quot; value=&quot;male&quot; /&gt; Male
+  &lt;input type=&quot;radio&quot; id=&quot;female&quot; name=&quot;gender&quot; value=&quot;female&quot; /&gt; Female
+
+  &lt;label for=&quot;vehicle&quot;&gt;Select your vehicle:&lt;/label&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;bike&quot; name=&quot;vehicle&quot; value=&quot;bike&quot; /&gt; Bike
+  &lt;input type=&quot;checkbox&quot; id=&quot;car&quot; name=&quot;vehicle&quot; value=&quot;car&quot; /&gt; Car
+
+  &lt;label for=&quot;country&quot;&gt;Country:&lt;/label&gt;
+  &lt;select id=&quot;country&quot; name=&quot;country&quot;&gt;
+    &lt;option value=&quot;usa&quot;&gt;USA&lt;/option&gt;
+    &lt;option value=&quot;canada&quot;&gt;Canada&lt;/option&gt;
+    &lt;option value=&quot;mexico&quot;&gt;Mexico&lt;/option&gt;
+  &lt;/select&gt;
+
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+&lt;/form&gt;
+</code></pre>
+<ol>
+<li>
+<p><strong>Form Styling:</strong></p>
+</li>
+<li>
+<p>Use CSS to style the form and make it user-friendly. Apply consistent margins, padding, and font sizes to ensure readability.</p>
+</li>
+<li>
+<p>Consider adding hover effects to buttons to improve user experience.</p>
+</li>
+<li>
+<p><strong>JavaScript Integration:</strong></p>
+</li>
+<li>
+<p>Add JavaScript validation to ensure all required fields are filled out correctly before submission.</p>
+</li>
+<li>
+<p>Example: Validate the "Name" field to ensure it contains only letters and is not left empty.</p>
+</li>
+<li>
+<p><strong>Example:</strong></p>
+</li>
+</ol>
+<pre><code class="language-javascript">function validateForm() {
+  var name = document.getElementById(&quot;name&quot;).value;
+  if (name == &quot;&quot;) {
+    alert(&quot;Name must be filled out&quot;);
+    return false;
+  }
+}
+</code></pre>
+<ol>
+<li>
+<p><strong>Form Submission:</strong></p>
+</li>
+<li>
+<p>Implement form submission using the <code>POST</code> method. Ensure that the data is sent securely to the server.</p>
+</li>
+<li>If you're using a server-side language like PHP or Node.js, include a simple script to process the form data.</li>
+</ol>
+<h3 id="task-2-embedding-svg-images-and-using-the-canvas-element">Task 2: Embedding SVG Images and Using the <code>&lt;canvas&gt;</code> Element</h3>
+<p>Next, you’ll integrate an SVG image and utilize the <code>&lt;canvas&gt;</code> element to draw graphics on your webpage.</p>
+<ol>
+<li>
+<p><strong>Embedding an SVG Image:</strong></p>
+</li>
+<li>
+<p>Select or create an SVG image relevant to your form, such as an icon or logo.</p>
+</li>
+<li>
+<p>Embed the SVG image into your HTML file using the <code>&lt;img&gt;</code> tag or directly include the SVG code in your HTML.</p>
+</li>
+<li>
+<p><strong>Example:</strong></p>
+</li>
+</ol>
+<pre><code class="language-html">&lt;img src=&quot;icon.svg&quot; alt=&quot;Form Icon&quot; /&gt;
+</code></pre>
+<ol>
+<li>
+<p><strong>Using the <code>&lt;canvas&gt;</code> Element:</strong></p>
+</li>
+<li>
+<p>Add a <code>&lt;canvas&gt;</code> element below your form.</p>
+</li>
+<li>
+<p>Write a JavaScript function that draws a simple shape (e.g., a rectangle or circle) on the canvas.</p>
+</li>
+<li>
+<p><strong>Example:</strong></p>
+</li>
+</ol>
+<pre><code class="language-html">&lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;100&quot;&gt;&lt;/canvas&gt;
+&lt;script&gt;
+  var c = document.getElementById(&quot;myCanvas&quot;);
+  var ctx = c.getContext(&quot;2d&quot;);
+  ctx.fillStyle = &quot;#FF0000&quot;;
+  ctx.fillRect(10, 10, 150, 75);
+&lt;/script&gt;
+</code></pre>
+<ol>
+<li>
+<p><strong>Integrating with the Form:</strong></p>
+</li>
+<li>
+<p>Optionally, use JavaScript to update the canvas dynamically based on user input. For example, you could draw different shapes depending on the options selected in the form.</p>
+</li>
+</ol>
+<h2 id="practice-exercise-building-a-comprehensive-webpage">Practice Exercise: Building a Comprehensive Webpage</h2>
+<h3 id="task-create-a-webpage-incorporating-key-elements">Task: Create a Webpage Incorporating Key Elements</h3>
+<p>For this practice exercise, you will build a complete webpage that integrates the following elements:</p>
+<ol>
+<li>
+<p><strong>Header and Footer:</strong></p>
+</li>
+<li>
+<p>Create a consistent header and footer for your webpage.</p>
+</li>
+<li>The header should include the SVG image and navigation links.</li>
+<li>
+<p>The footer can contain additional links or information.</p>
+</li>
+<li>
+<p><strong>Main Content:</strong></p>
+</li>
+<li>
+<p>The main section should feature your interactive form, styled for usability.</p>
+</li>
+<li>
+<p>Embed the <code>&lt;canvas&gt;</code> element within the main content and use JavaScript to make it interactive.</p>
+</li>
+<li>
+<p><strong>Layout and Design:</strong></p>
+</li>
+<li>
+<p>Use CSS Grid or Flexbox to create a responsive layout that adapts to different screen sizes.</p>
+</li>
+<li>
+<p>Ensure the webpage is fully responsive, with the form and canvas resizing appropriately on smaller screens.</p>
+</li>
+<li>
+<p><strong>Submission:</strong></p>
+</li>
+<li>
+<p>Once completed, submit your project through the class portal for review.</p>
+</li>
+</ol>
+<h3 id="bonus-task">Bonus Task:</h3>
+<p>For an additional challenge, enhance your webpage with the following features:</p>
+<ul>
+<li><strong>Form Validation:</strong> Add more complex JavaScript validation, such as ensuring the email format is correct or the password meets specific criteria.</li>
+<li><strong>Dynamic Content:</strong> Use JavaScript to dynamically update the content on your page based on user interaction. For example, display a thank you message after form submission without reloading the page.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>This module focused on applying your HTML5 and JavaScript knowledge to create interactive and functional web pages. By completing the tasks and exercises, you’ve gained hands-on experience with form elements, SVG images, the <code>&lt;canvas&gt;</code> element, and JavaScript integration. These skills are essential for building modern, responsive, and user-friendly websites.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../module_02/" class="btn btn-neutral float-left" title="Incorporating JavaScript"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../module_04/" class="btn btn-neutral float-right" title="Advanced CSS Selectors">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../module_02/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../module_04/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

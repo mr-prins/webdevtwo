@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevtwo.mrprins.com/course/module_04/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Advanced CSS Selectors - Web Development II - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Advanced CSS Selectors";
+        var mkdocs_page_input_path = "course\\module_04.md";
+        var mkdocs_page_url = "/course/module_04/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development II - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../module_01/">Introduction to Advanced HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_02/">Incorporating JavaScript</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_03/">Performance Skills I</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Advanced CSS Selectors</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-youll-learn">What You'll Learn:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#advanced-css-selectors">Advanced CSS Selectors</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#contextual-selectors">Contextual Selectors</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pseudo-class-selectors">Pseudo-Class Selectors</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pseudo-element-selectors">Pseudo-Element Selectors</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#css-layout-techniques">CSS Layout Techniques</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#css-grid">CSS Grid</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#flexbox">Flexbox</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#responsive-design">Responsive Design</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#media-queries">Media Queries</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#responsive-units">Responsive Units</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#css-animations-and-graphics">CSS Animations and Graphics</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#css-animations">CSS Animations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#css-graphics">CSS Graphics</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#performance-skills">Performance Skills</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#practical-application-building-a-responsive-webpage">Practical Application: Building a Responsive Webpage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#project-design-a-responsive-webpage-with-advanced-layout-and-animations">Project: Design a Responsive Webpage with Advanced Layout and Animations</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_05/">Website Planning and Usability</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_06/">Content Creation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_07/">Website Deployment and Maintenance</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_08/">Performance Skills II</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_09/">JavaScript Basics</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development II - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">Advanced CSS Selectors</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="advanced-css-selectors-and-layout-techniques">Advanced CSS Selectors and Layout Techniques</h1>
+<h2 id="overview">Overview</h2>
+<p>In this module, we will explore advanced CSS selectors and layout techniques that will allow you to create more sophisticated and responsive web designs. By the end of this module, you'll be able to apply styles in a more targeted and efficient manner, and you'll have a solid understanding of modern layout methods such as CSS Grid and Flexbox.</p>
+<h3 id="what-youll-learn">What You'll Learn:</h3>
+<ul>
+<li>How to use advanced CSS selectors to target elements more precisely.</li>
+<li>The power of pseudo-classes and pseudo-elements in enhancing user interaction and styling.</li>
+<li>Mastering CSS Grid and Flexbox for complex layouts.</li>
+<li>Techniques for creating responsive designs that work well on all devices.</li>
+<li>An introduction to CSS animations and graphics for dynamic visual effects.</li>
+</ul>
+<h2 id="advanced-css-selectors">Advanced CSS Selectors</h2>
+<h3 id="contextual-selectors">Contextual Selectors</h3>
+<p>Contextual selectors allow you to apply styles based on the hierarchy and structure of your HTML. This means you can target specific elements within a certain context, such as within a <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, or a particular <code>&lt;div&gt;</code>.</p>
+<ul>
+<li><strong>Descendant Selector:</strong></li>
+</ul>
+<pre><code class="language-css">div p {
+  color: blue;
+}
+</code></pre>
+<ul>
+<li>
+<p>Targets all <code>&lt;p&gt;</code> elements inside a <code>&lt;div&gt;</code>.</p>
+</li>
+<li>
+<p><strong>Child Selector:</strong></p>
+</li>
+</ul>
+<pre><code class="language-css">ul &gt; li {
+  list-style-type: square;
+}
+</code></pre>
+<ul>
+<li>
+<p>Targets only the direct <code>&lt;li&gt;</code> children of <code>&lt;ul&gt;</code> elements.</p>
+</li>
+<li>
+<p><strong>Adjacent Sibling Selector:</strong></p>
+</li>
+</ul>
+<pre><code class="language-css">h1 + p {
+  margin-top: 0;
+}
+</code></pre>
+<ul>
+<li>Targets the first <code>&lt;p&gt;</code> element immediately following an <code>&lt;h1&gt;</code> element.</li>
+</ul>
+<h3 id="pseudo-class-selectors">Pseudo-Class Selectors</h3>
+<p>Pseudo-classes allow you to style elements based on their state or position in the document tree. They are particularly useful for enhancing user interactions.</p>
+<ul>
+<li><strong>:hover:</strong></li>
+</ul>
+<pre><code class="language-css">a:hover {
+  color: red;
+}
+</code></pre>
+<ul>
+<li>
+<p>Changes the color of links when the user hovers over them.</p>
+</li>
+<li>
+<p><strong>:active:</strong></p>
+</li>
+</ul>
+<pre><code class="language-css">button:active {
+  background-color: green;
+}
+</code></pre>
+<ul>
+<li>
+<p>Styles buttons differently when they are being clicked.</p>
+</li>
+<li>
+<p><strong>:visited:</strong></p>
+</li>
+</ul>
+<pre><code class="language-css">a:visited {
+  color: purple;
+}
+</code></pre>
+<ul>
+<li>Changes the color of links after they have been visited.</li>
+</ul>
+<h3 id="pseudo-element-selectors">Pseudo-Element Selectors</h3>
+<p>Pseudo-elements are used to style specific parts of an element, such as the first letter or line of text. They can also be used to add content before or after an element.</p>
+<ul>
+<li><strong>::before:</strong></li>
+</ul>
+<pre><code class="language-css">h1::before {
+  content: &quot;§ &quot;;
+  color: gray;
+}
+</code></pre>
+<ul>
+<li>
+<p>Adds a section symbol before all <code>&lt;h1&gt;</code> elements.</p>
+</li>
+<li>
+<p><strong>::after:</strong></p>
+</li>
+</ul>
+<pre><code class="language-css">p::after {
+  content: &quot;...&quot;;
+}
+</code></pre>
+<ul>
+<li>
+<p>Adds ellipses after all <code>&lt;p&gt;</code> elements.</p>
+</li>
+<li>
+<p><strong>::first-letter:</strong></p>
+</li>
+</ul>
+<pre><code class="language-css">p::first-letter {
+  font-size: 2em;
+  font-weight: bold;
+}
+</code></pre>
+<ul>
+<li>Styles the first letter of every paragraph to be larger and bold.</li>
+</ul>
+<h2 id="css-layout-techniques">CSS Layout Techniques</h2>
+<h3 id="css-grid">CSS Grid</h3>
+<p>CSS Grid is a powerful layout system that allows you to create complex, responsive designs with minimal code. It provides a two-dimensional grid-based layout system, making it easier to design web pages without having to rely on floats and positioning.</p>
+<ul>
+<li><strong>Basic Grid Setup:</strong></li>
+</ul>
+<pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+
+.grid-item {
+  background-color: lightblue;
+  padding: 20px;
+}
+</code></pre>
+<ul>
+<li>
+<p>This creates a simple grid with two columns, where the first column takes up one fraction of the available space, and the second column takes up two fractions.</p>
+</li>
+<li>
+<p><strong>Responsive Grid:</strong></p>
+</li>
+</ul>
+<pre><code class="language-css">.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+</code></pre>
+<ul>
+<li>This creates a responsive grid where the number of columns automatically adjusts based on the screen size.</li>
+</ul>
+<h3 id="flexbox">Flexbox</h3>
+<p>Flexbox is another CSS layout module that provides a way to align and distribute space among items in a container. It excels at handling one-dimensional layouts, either as a row or a column.</p>
+<ul>
+<li><strong>Basic Flexbox Setup:</strong></li>
+</ul>
+<pre><code class="language-css">.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-item {
+  background-color: lightcoral;
+  padding: 20px;
+}
+</code></pre>
+<ul>
+<li>
+<p>This creates a flex container where items are spaced evenly across the container with space between them.</p>
+</li>
+<li>
+<p><strong>Vertical Centering:</strong></p>
+</li>
+</ul>
+<pre><code class="language-css">.flex-container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+</code></pre>
+<ul>
+<li>This vertically centers the flex items within the container.</li>
+</ul>
+<h3 id="responsive-design">Responsive Design</h3>
+<h4 id="media-queries">Media Queries</h4>
+<p>Media queries allow you to apply different styles based on the screen size or device type, ensuring your design looks great on all devices.</p>
+<ul>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="language-css">@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+</code></pre>
+<ul>
+<li>This media query adjusts the grid to a single column on screens smaller than 600px wide.</li>
+</ul>
+<h4 id="responsive-units">Responsive Units</h4>
+<p>Using responsive units like <code>rem</code>, <code>vh</code>, and <code>vw</code> helps create layouts that adapt to different screen sizes.</p>
+<ul>
+<li><strong>rem:</strong> Relative to the root element’s font size.</li>
+</ul>
+<pre><code class="language-css">body {
+  font-size: 1rem; /* Equal to 16px if the root font size is 16px */
+}
+</code></pre>
+<ul>
+<li><strong>vh (viewport height):</strong> 1vh is 1% of the viewport height.</li>
+</ul>
+<pre><code class="language-css">.hero {
+  height: 100vh; /* Full height of the viewport */
+}
+</code></pre>
+<ul>
+<li><strong>vw (viewport width):</strong> 1vw is 1% of the viewport width.</li>
+</ul>
+<pre><code class="language-css">.container {
+  width: 80vw; /* 80% of the viewport width */
+}
+</code></pre>
+<h2 id="css-animations-and-graphics">CSS Animations and Graphics</h2>
+<h3 id="css-animations">CSS Animations</h3>
+<p>CSS animations allow you to create smooth transitions between different states of an element.</p>
+<ul>
+<li><strong>Basic Animation:</strong></li>
+</ul>
+<pre><code class="language-css">@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animated-box {
+  animation: slideIn 2s ease-out;
+}
+</code></pre>
+<ul>
+<li>This creates a sliding animation that moves an element from off-screen to its final position.</li>
+</ul>
+<h3 id="css-graphics">CSS Graphics</h3>
+<p>CSS can be used to create simple shapes and visual effects without needing images.</p>
+<ul>
+<li><strong>Creating Shapes:</strong></li>
+</ul>
+<pre><code class="language-css">.circle {
+  width: 100px;
+  height: 100px;
+  background-color: coral;
+  border-radius: 50%;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid lightgreen;
+}
+</code></pre>
+<ul>
+<li>These styles create a circle and a triangle purely with CSS.</li>
+</ul>
+<h2 id="performance-skills">Performance Skills</h2>
+<h3 id="practical-application-building-a-responsive-webpage">Practical Application: Building a Responsive Webpage</h3>
+<p>In this section, you'll put everything you've learned into practice by building a fully responsive webpage.</p>
+<ol>
+<li>
+<p><strong>Setup Your Layout:</strong></p>
+</li>
+<li>
+<p>Use CSS Grid or Flexbox to create a complex layout with multiple sections, such as a header, main content area, sidebar, and footer.</p>
+</li>
+<li>
+<p><strong>Enhance Interactivity:</strong></p>
+</li>
+<li>
+<p>Use pseudo-classes like <code>:hover</code> and <code>:active</code> to enhance user interaction.</p>
+</li>
+<li>
+<p>Add pseudo-elements like <code>::before</code> and <code>::after</code> to style specific parts of your content.</p>
+</li>
+<li>
+<p><strong>Make It Responsive:</strong></p>
+</li>
+<li>
+<p>Implement media queries to adjust the layout and styling for different screen sizes.</p>
+</li>
+<li>
+<p>Use responsive units like <code>rem</code>, <code>vh</code>, and <code>vw</code> to ensure your layout adapts smoothly.</p>
+</li>
+<li>
+<p><strong>Add Animations:</strong></p>
+</li>
+<li>
+<p>Create simple CSS animations to add dynamic effects to your webpage, such as sliding in content or animating buttons on hover.</p>
+</li>
+</ol>
+<h3 id="project-design-a-responsive-webpage-with-advanced-layout-and-animations">Project: Design a Responsive Webpage with Advanced Layout and Animations</h3>
+<p>Your final task for this module is to design and build a fully responsive webpage that incorporates an advanced layout using CSS Grid or Flexbox, interactive elements with pseudo-classes and pseudo-elements, and CSS animations to enhance the user experience.</p>
+<h2 id="summary">Summary</h2>
+<p>This module provided you with advanced tools and techniques to take your CSS skills to the next level. By mastering contextual selectors, pseudo-classes, pseudo-elements, and modern layout techniques like CSS Grid and Flexbox, you're now equipped to create sophisticated, responsive, and visually engaging web pages. The performance tasks and project work will solidify your understanding and prepare you for more advanced web development challenges.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../module_03/" class="btn btn-neutral float-left" title="Performance Skills I"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../module_05/" class="btn btn-neutral float-right" title="Website Planning and Usability">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../module_03/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../module_05/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

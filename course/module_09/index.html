@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevtwo.mrprins.com/course/module_09/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>JavaScript Basics - Web Development II - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "JavaScript Basics";
+        var mkdocs_page_input_path = "course\\module_09.md";
+        var mkdocs_page_url = "/course/module_09/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development II - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../module_01/">Introduction to Advanced HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_02/">Incorporating JavaScript</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_03/">Performance Skills I</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_04/">Advanced CSS Selectors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_05/">Website Planning and Usability</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_06/">Content Creation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_07/">Website Deployment and Maintenance</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_08/">Performance Skills II</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">JavaScript Basics</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-youll-learn">What You'll Learn:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-javascript">What is JavaScript?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#introduction-to-javascript">Introduction to JavaScript</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#javascripts-role-in-modern-web-development">JavaScript's Role in Modern Web Development</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#including-javascript-in-html">Including JavaScript in HTML</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#in-line-javascript">In-line JavaScript</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#internal-javascript">Internal JavaScript</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#external-javascript">External JavaScript</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#javascript-fundamentals">JavaScript Fundamentals</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#variables-in-javascript">Variables in JavaScript</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#functions-in-javascript">Functions in JavaScript</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#user-input-in-javascript">User Input in JavaScript</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#practical-application">Practical Application</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#simple-javascript-script">Simple JavaScript Script</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#project-work-interactive-webpage">Project Work: Interactive Webpage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development II - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">JavaScript Basics</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="javascript-basics">JavaScript Basics</h1>
+<h2 id="overview">Overview</h2>
+<p>In this final module, we will dive into the fundamentals of JavaScript, the programming language that powers dynamic and interactive elements on web pages. Understanding JavaScript is essential for creating responsive and engaging websites. This module will introduce you to the basics of JavaScript, including how to include it in your HTML, the core concepts of variables, functions, and user input, and how to apply these concepts to enhance your web projects.</p>
+<h3 id="what-youll-learn">What You'll Learn:</h3>
+<ul>
+<li>An introduction to JavaScript and its role in web development.</li>
+<li>How to include JavaScript in your HTML documents.</li>
+<li>Fundamental JavaScript concepts, including variables, functions, and user input.</li>
+<li>Practical application of JavaScript to create interactive web elements.</li>
+</ul>
+<h2 id="what-is-javascript">What is JavaScript?</h2>
+<h3 id="introduction-to-javascript">Introduction to JavaScript</h3>
+<p>JavaScript is a powerful scripting language that allows you to implement complex features on web pages. It can be used to create interactive effects like image sliders, form validation, dynamic content updates, and much more. JavaScript works alongside HTML and CSS to build modern web applications, enhancing the user experience by making web pages more dynamic and interactive.</p>
+<h3 id="javascripts-role-in-modern-web-development">JavaScript's Role in Modern Web Development</h3>
+<p>JavaScript is essential in modern web development for several reasons:</p>
+<ul>
+<li><strong>Interactivity:</strong> It allows you to create interactive elements that respond to user actions, such as clicking buttons or submitting forms.</li>
+<li><strong>Dynamic Content:</strong> JavaScript can update content on the page without requiring a full page reload, improving the user experience.</li>
+<li><strong>APIs and Integration:</strong> JavaScript can interact with web APIs to fetch data from servers, integrate with third-party services, and manipulate the DOM (Document Object Model) in real-time.</li>
+</ul>
+<h2 id="including-javascript-in-html">Including JavaScript in HTML</h2>
+<h3 id="in-line-javascript">In-line JavaScript</h3>
+<p>In-line JavaScript is added directly within HTML elements using event attributes like <code>onclick</code> or <code>onmouseover</code>. While easy to use for small scripts, it’s generally recommended to keep JavaScript separate from HTML to maintain cleaner code.</p>
+<ul>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;button onclick=&quot;alert('Button clicked!')&quot;&gt;Click Me&lt;/button&gt;
+</code></pre>
+<ul>
+<li>When the button is clicked, an alert box displays the message "Button clicked!"</li>
+</ul>
+<h3 id="internal-javascript">Internal JavaScript</h3>
+<p>Internal JavaScript is written within <code>&lt;script&gt;</code> tags directly in the HTML document. This method is useful for scripts that are specific to a single HTML page.</p>
+<ul>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;script&gt;
+  function showAlert() {
+    alert(&quot;Hello, world!&quot;);
+  }
+&lt;/script&gt;
+&lt;button onclick=&quot;showAlert()&quot;&gt;Click Me&lt;/button&gt;
+</code></pre>
+<ul>
+<li>This example defines a function called <code>showAlert()</code> that displays an alert message when the button is clicked.</li>
+</ul>
+<h3 id="external-javascript">External JavaScript</h3>
+<p>External JavaScript involves linking to a separate <code>.js</code> file from your HTML document. This method is preferred for larger projects as it separates the HTML structure from the JavaScript functionality, making your code more organized and easier to maintain.</p>
+<ul>
+<li><strong>HTML Example:</strong></li>
+</ul>
+<pre><code class="language-html">&lt;script src=&quot;scripts.js&quot;&gt;&lt;/script&gt;
+&lt;button onclick=&quot;showAlert()&quot;&gt;Click Me&lt;/button&gt;
+</code></pre>
+<ul>
+<li><strong>External JavaScript (scripts.js):</strong></li>
+</ul>
+<pre><code class="language-javascript">function showAlert() {
+  alert(&quot;Hello, world!&quot;);
+}
+</code></pre>
+<ul>
+<li>The JavaScript code is stored in an external file (<code>scripts.js</code>), and it’s linked to the HTML file using the <code>&lt;script src="scripts.js"&gt;</code> tag.</li>
+</ul>
+<h2 id="javascript-fundamentals">JavaScript Fundamentals</h2>
+<h3 id="variables-in-javascript">Variables in JavaScript</h3>
+<p>Variables are used to store data that can be used and manipulated in your scripts. JavaScript uses the <code>var</code>, <code>let</code>, and <code>const</code> keywords to declare variables.</p>
+<ul>
+<li><strong>Declaring Variables:</strong></li>
+</ul>
+<pre><code class="language-javascript">let userName = &quot;John&quot;;
+const pi = 3.14159;
+var age = 25;
+</code></pre>
+<ul>
+<li>
+<p><code>let</code> and <code>var</code> are used to declare variables that can change, while <code>const</code> is used for variables that should remain constant.</p>
+</li>
+<li>
+<p><strong>Using Variables:</strong></p>
+</li>
+</ul>
+<pre><code class="language-javascript">let greeting = &quot;Hello, &quot; + userName;
+alert(greeting); // Displays &quot;Hello, John&quot;
+</code></pre>
+<h3 id="functions-in-javascript">Functions in JavaScript</h3>
+<p>Functions are reusable blocks of code that perform a specific task. You can define a function once and call it multiple times throughout your script.</p>
+<ul>
+<li><strong>Defining a Function:</strong></li>
+</ul>
+<pre><code class="language-javascript">function greetUser(name) {
+  alert(&quot;Hello, &quot; + name + &quot;!&quot;);
+}
+</code></pre>
+<ul>
+<li><strong>Calling a Function:</strong></li>
+</ul>
+<pre><code class="language-javascript">greetUser(&quot;Alice&quot;); // Displays &quot;Hello, Alice!&quot;
+greetUser(&quot;Bob&quot;); // Displays &quot;Hello, Bob!&quot;
+</code></pre>
+<ul>
+<li><strong>Function with Return Value:</strong></li>
+</ul>
+<pre><code class="language-javascript">function addNumbers(a, b) {
+  return a + b;
+}
+
+let sum = addNumbers(5, 10);
+alert(sum); // Displays 15
+</code></pre>
+<h3 id="user-input-in-javascript">User Input in JavaScript</h3>
+<p>JavaScript can gather user input through prompts, forms, and event listeners. This input can then be processed or used to update the page dynamically.</p>
+<ul>
+<li><strong>Using <code>prompt</code> to Get User Input:</strong></li>
+</ul>
+<pre><code class="language-javascript">let userAge = prompt(&quot;Enter your age:&quot;);
+alert(&quot;You are &quot; + userAge + &quot; years old.&quot;);
+</code></pre>
+<ul>
+<li>
+<p>The <code>prompt()</code> function displays a dialog box asking the user for input, which is then stored in a variable.</p>
+</li>
+<li>
+<p><strong>Form Input:</strong></p>
+</li>
+</ul>
+<pre><code class="language-html">&lt;form&gt;
+  Name: &lt;input type=&quot;text&quot; id=&quot;name&quot; /&gt;
+  &lt;input type=&quot;button&quot; value=&quot;Submit&quot; onclick=&quot;displayGreeting()&quot; /&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+  function displayGreeting() {
+    let name = document.getElementById(&quot;name&quot;).value;
+    alert(&quot;Hello, &quot; + name + &quot;!&quot;);
+  }
+&lt;/script&gt;
+</code></pre>
+<ul>
+<li>This form takes user input from a text field and uses a JavaScript function to display a greeting when the button is clicked.</li>
+</ul>
+<h2 id="practical-application">Practical Application</h2>
+<h3 id="simple-javascript-script">Simple JavaScript Script</h3>
+<p>In this section, you’ll create a basic JavaScript script that interacts with HTML elements to enhance the functionality of a web page.</p>
+<ol>
+<li>
+<p><strong>Task: Create a Dynamic Greeting</strong></p>
+</li>
+<li>
+<p>Write a script that asks the user for their name using a <code>prompt()</code>, then displays a personalized greeting on the web page.</p>
+</li>
+<li>
+<p><strong>Example:</strong></p>
+</li>
+</ol>
+<pre><code class="language-html">&lt;p id=&quot;greeting&quot;&gt;&lt;/p&gt;
+
+&lt;script&gt;
+  let userName = prompt(&quot;What is your name?&quot;);
+  document.getElementById(&quot;greeting&quot;).innerHTML = &quot;Welcome, &quot; + userName + &quot;!&quot;;
+&lt;/script&gt;
+</code></pre>
+<ul>
+<li>
+<p>This script dynamically updates the content of the <code>&lt;p&gt;</code> element with a personalized greeting based on the user’s input.</p>
+</li>
+<li>
+<p><strong>Task: Validate a Form</strong></p>
+</li>
+<li>
+<p>Write a script that validates a form input, ensuring the user has entered data before allowing the form to be submitted.</p>
+</li>
+<li>
+<p><strong>Example:</strong></p>
+</li>
+</ul>
+<pre><code class="language-html">&lt;form onsubmit=&quot;return validateForm()&quot;&gt;
+  Name: &lt;input type=&quot;text&quot; id=&quot;name&quot; /&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+  function validateForm() {
+    let name = document.getElementById(&quot;name&quot;).value;
+    if (name == &quot;&quot;) {
+      alert(&quot;Name must be filled out&quot;);
+      return false;
+    }
+    return true;
+  }
+&lt;/script&gt;
+</code></pre>
+<ul>
+<li>This script prevents the form from being submitted if the "Name" field is empty, displaying an alert instead.</li>
+</ul>
+<h3 id="project-work-interactive-webpage">Project Work: Interactive Webpage</h3>
+<p>For your final project in this module, integrate JavaScript into your ongoing web development project to create dynamic and interactive elements. Your project should include:</p>
+<ul>
+<li><strong>Dynamic Content:</strong> Use JavaScript to update or manipulate content on the page based on user actions.</li>
+<li><strong>Form Validation:</strong> Implement JavaScript form validation to ensure users provide the necessary input before submission.</li>
+<li><strong>Event Handling:</strong> Use event listeners to respond to user interactions like clicks, mouseovers, or form submissions.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>In this module, you’ve been introduced to the basics of JavaScript, a critical language for adding interactivity and dynamic content to websites. By learning how to include JavaScript in your HTML, working with variables and functions, and handling user input, you’ve gained the foundational skills needed to start creating interactive web experiences. The tasks and project work have provided hands-on experience in applying JavaScript to real-world web development scenarios, preparing you for more advanced JavaScript concepts and projects in the future.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../module_08/" class="btn btn-neutral float-left" title="Performance Skills II"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../module_08/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

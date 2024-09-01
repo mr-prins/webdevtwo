@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Ricardo Prins" /><link rel="canonical" href="https://webdevtwo.mrprins.com/course/module_07/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Website Deployment and Maintenance - Web Development II - Mr. Prins</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Website Deployment and Maintenance";
+        var mkdocs_page_input_path = "course\\module_07.md";
+        var mkdocs_page_url = "/course/module_07/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development II - Mr. Prins
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course Structure</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../module_01/">Introduction to Advanced HTML</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_02/">Incorporating JavaScript</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_03/">Performance Skills I</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_04/">Advanced CSS Selectors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_05/">Website Planning and Usability</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_06/">Content Creation</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Website Deployment and Maintenance</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-youll-learn">What You'll Learn:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#uploading-via-ftp">Uploading via FTP</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-is-ftp">What is FTP?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#setting-up-ftp-access">Setting Up FTP Access</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#uploading-your-website-files">Uploading Your Website Files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#troubleshooting-common-ftp-issues">Troubleshooting Common FTP Issues</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#maintaining-a-website">Maintaining a Website</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#regular-updates">Regular Updates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#website-backups">Website Backups</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#monitoring-and-security">Monitoring and Security</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#performance-skills">Performance Skills</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#practical-application-deploy-and-maintain-a-website">Practical Application: Deploy and Maintain a Website</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#project-website-deployment-and-maintenance-plan">Project: Website Deployment and Maintenance Plan</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_08/">Performance Skills II</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../module_09/">JavaScript Basics</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development II - Mr. Prins</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Course Structure</li>
+      <li class="breadcrumb-item active">Website Deployment and Maintenance</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="website-deployment-and-maintenance">Website Deployment and Maintenance</h1>
+<h2 id="overview">Overview</h2>
+<p>In this module, we'll cover the essential steps for deploying a website and maintaining it over time. Once your website is complete, getting it live on the web and ensuring it remains functional and up-to-date are critical tasks. This module will guide you through the process of uploading your site to a server, maintaining its security, and performing regular updates and backups.</p>
+<h3 id="what-youll-learn">What You'll Learn:</h3>
+<ul>
+<li>How to deploy a website using FTP.</li>
+<li>Best practices for maintaining a website, including regular updates and backups.</li>
+<li>Methods for monitoring website performance and security.</li>
+</ul>
+<h2 id="uploading-via-ftp">Uploading via FTP</h2>
+<h3 id="what-is-ftp">What is FTP?</h3>
+<p>FTP (File Transfer Protocol) is a standard network protocol used to transfer files between a client and a server on a computer network. It's one of the most common ways to upload your website files to a web server, making them accessible on the internet.</p>
+<h3 id="setting-up-ftp-access">Setting Up FTP Access</h3>
+<ol>
+<li>
+<p><strong>Choose an FTP Client:</strong></p>
+</li>
+<li>
+<p>To upload your files via FTP, you’ll need an FTP client. Popular options include:</p>
+</li>
+<li><strong>FileZilla:</strong> A free, open-source FTP client that is easy to use.</li>
+<li><strong>Cyberduck:</strong> Another free option with a user-friendly interface.</li>
+<li>
+<p><strong>WinSCP:</strong> A powerful FTP client for Windows with a built-in text editor.</p>
+</li>
+<li>
+<p><strong>Get Your FTP Credentials:</strong></p>
+</li>
+<li>
+<p>You’ll need the following credentials from your web hosting provider to connect via FTP:</p>
+</li>
+<li><strong>FTP Hostname:</strong> The server address (e.g., ftp.yourwebsite.com).</li>
+<li><strong>Username:</strong> Your FTP account username.</li>
+<li><strong>Password:</strong> The password associated with your FTP account.</li>
+<li>
+<p><strong>Port:</strong> Typically, port 21 is used for FTP.</p>
+</li>
+<li>
+<p><strong>Connect to Your Server:</strong></p>
+</li>
+<li>
+<p>Open your FTP client and enter your FTP credentials to connect to your web server.</p>
+</li>
+<li>Once connected, you’ll see your local files on one side of the screen and the server files on the other.</li>
+</ol>
+<h3 id="uploading-your-website-files">Uploading Your Website Files</h3>
+<ol>
+<li>
+<p><strong>Prepare Your Files:</strong></p>
+</li>
+<li>
+<p>Ensure all your website files are organized in a clear directory structure. Your root directory should include your <code>index.html</code> file, CSS files, JavaScript files, images, and any other assets.</p>
+</li>
+<li>
+<p><strong>Transfer Files:</strong></p>
+</li>
+<li>
+<p>Use the FTP client to drag and drop your website files from your local computer to the appropriate directory on the server.</p>
+</li>
+<li>
+<p>The root directory of your server (often called <code>public_html</code> or <code>www</code>) is where your <code>index.html</code> file should be placed.</p>
+</li>
+<li>
+<p><strong>Verify the Upload:</strong></p>
+</li>
+<li>
+<p>After the files have been uploaded, open your web browser and navigate to your website’s URL. Ensure that everything is displaying and functioning as expected.</p>
+</li>
+</ol>
+<h3 id="troubleshooting-common-ftp-issues">Troubleshooting Common FTP Issues</h3>
+<ul>
+<li><strong>Connection Problems:</strong> Double-check your FTP credentials and ensure your internet connection is stable.</li>
+<li><strong>Permissions Issues:</strong> Ensure that your files have the correct permissions. Files typically need read permissions (644) and directories need execute permissions (755).</li>
+<li><strong>Incomplete Uploads:</strong> If files don’t upload completely, try uploading them again or use an FTP client with resume support, like FileZilla.</li>
+</ul>
+<h2 id="maintaining-a-website">Maintaining a Website</h2>
+<h3 id="regular-updates">Regular Updates</h3>
+<ol>
+<li>
+<p><strong>Updating Content:</strong></p>
+</li>
+<li>
+<p>Regularly update your website content to keep it fresh and relevant. This might include adding new blog posts, updating product information, or refreshing images.</p>
+</li>
+<li>
+<p>Use a content management system (CMS) like WordPress if your site requires frequent updates.</p>
+</li>
+<li>
+<p><strong>Updating Code:</strong></p>
+</li>
+<li>
+<p>Keep your HTML, CSS, and JavaScript code up-to-date with the latest best practices. This may involve refactoring code for better performance or compatibility with new web standards.</p>
+</li>
+<li>
+<p>Regularly update any third-party libraries or frameworks you’re using, such as jQuery or Bootstrap, to their latest versions.</p>
+</li>
+<li>
+<p><strong>Updating Software:</strong></p>
+</li>
+<li>
+<p>If your website is hosted on a CMS or uses server-side technologies like PHP, ensure that your software is always up-to-date to protect against security vulnerabilities.</p>
+</li>
+</ol>
+<h3 id="website-backups">Website Backups</h3>
+<ol>
+<li>
+<p><strong>Importance of Backups:</strong></p>
+</li>
+<li>
+<p>Regular backups are essential to protect your website from data loss due to hacking, server failures, or accidental deletions.</p>
+</li>
+<li>
+<p><strong>Backup Methods:</strong></p>
+</li>
+<li>
+<p><strong>Manual Backups:</strong> Download your website files and database manually via FTP and save them to a secure location.</p>
+</li>
+<li><strong>Automated Backups:</strong> Use tools provided by your hosting provider or third-party services to automate regular backups.</li>
+<li>Many web hosts offer automatic backups as part of their hosting packages.</li>
+<li>
+<p>Plugins like UpdraftPlus (for WordPress) allow you to schedule backups and store them in cloud services like Google Drive or Dropbox.</p>
+</li>
+<li>
+<p><strong>Storing Backups:</strong></p>
+</li>
+<li>
+<p>Store backups in multiple locations, such as on a local hard drive and a cloud storage service, to ensure redundancy.</p>
+</li>
+<li>
+<p><strong>Restoring from Backups:</strong></p>
+</li>
+<li>
+<p>Ensure you know how to restore your website from a backup. This typically involves uploading the backup files via FTP and restoring the database via a control panel like cPanel or using a tool like phpMyAdmin.</p>
+</li>
+</ol>
+<h3 id="monitoring-and-security">Monitoring and Security</h3>
+<ol>
+<li>
+<p><strong>Monitoring Website Performance:</strong></p>
+</li>
+<li>
+<p>Use tools like Google Analytics and Google Search Console to monitor your website’s performance, traffic, and user engagement.</p>
+</li>
+<li>
+<p>Regularly check your site’s loading speed using tools like Google PageSpeed Insights or GTmetrix and optimize as necessary.</p>
+</li>
+<li>
+<p><strong>Security Best Practices:</strong></p>
+</li>
+<li>
+<p><strong>Use Strong Passwords:</strong> Ensure all admin accounts use strong, unique passwords.</p>
+</li>
+<li><strong>Enable SSL:</strong> Secure your website with SSL (Secure Sockets Layer) to encrypt data transmitted between your server and users.</li>
+<li><strong>Keep Software Updated:</strong> Always update your CMS, plugins, and server software to the latest versions to protect against vulnerabilities.</li>
+<li>
+<p><strong>Regular Security Scans:</strong> Perform regular security scans using tools like Sucuri or Wordfence (for WordPress) to detect and fix potential security issues.</p>
+</li>
+<li>
+<p><strong>Handling Security Incidents:</strong></p>
+</li>
+<li>
+<p>In case of a security breach, act quickly to minimize damage. Restore your site from a clean backup if necessary, change all passwords, and patch any vulnerabilities that were exploited.</p>
+</li>
+</ol>
+<h2 id="performance-skills">Performance Skills</h2>
+<h3 id="practical-application-deploy-and-maintain-a-website">Practical Application: Deploy and Maintain a Website</h3>
+<p>In this section, you'll apply the skills learned to deploy and maintain a simple website.</p>
+<ol>
+<li>
+<p><strong>Deploying Your Website:</strong></p>
+</li>
+<li>
+<p>Set up FTP access with your hosting provider and use an FTP client to upload your website files to the server.</p>
+</li>
+<li>
+<p>Verify that your website is live and functioning correctly in a web browser.</p>
+</li>
+<li>
+<p><strong>Setting Up Backups:</strong></p>
+</li>
+<li>
+<p>Create a backup of your website files and database using either manual methods or automated tools.</p>
+</li>
+<li>
+<p>Store the backup in a secure location and document the process for restoring from a backup.</p>
+</li>
+<li>
+<p><strong>Monitoring and Security:</strong></p>
+</li>
+<li>
+<p>Set up Google Analytics and Google Search Console for your website to monitor traffic and performance.</p>
+</li>
+<li>Implement basic security measures such as enabling SSL and setting strong passwords.</li>
+</ol>
+<h3 id="project-website-deployment-and-maintenance-plan">Project: Website Deployment and Maintenance Plan</h3>
+<p>For your final task in this module, create a comprehensive deployment and maintenance plan for a website. This plan should include:</p>
+<ul>
+<li>Step-by-step instructions for deploying the website via FTP.</li>
+<li>A backup strategy that includes both manual and automated backups.</li>
+<li>A monitoring and security plan to ensure the website remains functional and secure over time.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>This module provided you with the essential knowledge and skills to successfully deploy and maintain a website. From uploading files via FTP to implementing regular updates and backups, you are now equipped to manage a live website effectively. The practical tasks and project work will give you hands-on experience in deploying and maintaining websites, ensuring they remain secure, up-to-date, and performing well.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../module_06/" class="btn btn-neutral float-left" title="Content Creation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../module_08/" class="btn btn-neutral float-right" title="Performance Skills II">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../module_06/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../module_08/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
